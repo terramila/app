@@ -1,0 +1,24 @@
+@mixin centerPage($width) {
+    padding-left: calc(50% - #{$widthPage});
+    padding-right: calc(50% - #{$widthPage});
+}
+
+@mixin flex1($direction, $gap){
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin flex2($direction){
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin text($fontSize){
+    font-family: 'Jost';
+    font-size: $fontSize;
+    color: $colorTextSmall;
+}

@@ -1,0 +1,60 @@
+.post{
+    @include centerPage($widthPage);
+    margin-bottom: 150px;
+    &-header{
+        font-size: 50px;
+        margin-bottom: 27px;
+    }
+    &-block{
+        border-radius: 62px;
+        border: 1px solid #E7E7E7;
+        padding: 22px 56px 22px 22px;
+        display: flex;
+        flex-direction: row;
+        gap: 65px;
+        &__content{
+            padding-top: 51px;
+            padding-bottom: 51px;
+            .post-block__subheader{
+                font-size: 25px;
+                margin-bottom: 22px;
+            }
+            .post-block__textfirst, 
+            .post-block__textsecond{
+                @include text($fontSize);
+                margin-bottom: 50px;
+                padding-right: 20px;
+            }
+            .post-block__date{
+                @include flex2($direction);
+                @include text(16px);
+            }
+        }
+    }
+}
+.articles{    
+    &-pagination{
+        display: flex;
+        justify-content: center;
+        padding-top: 51px;
+        @include flex1($direction, 20px);
+        &__item{
+            position: relative;
+            p{
+                position: absolute;
+                top: 15px;
+                right: 20px;
+            }
+        }
+        &__item:hover{
+            border: none;
+            cursor: pointer;
+            svg{
+                circle{
+                    fill:#F4F0EC;
+                    stroke:none;
+                }
+            }
+        }
+    }
+}
